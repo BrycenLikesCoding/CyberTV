@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+	    <title>
+	        Watch | cyber [tv]
+	    </title><style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+#noscript noscript {
+    background:black;
+    border-radius:25px;
+    padding:5px;
+    color:white;
+    width:10000px;
+    height:10000px;
+}
+html {
+    font-family:arial;
+    background:white;
+    background-image: url("galaxy.png");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-color:black;
+    color:white;
+    padding:5px;
+}
+a {
+    color:white;
+    text-decoration:none;
+}
+#title {
+    font-size:45px;
+}
+a:hover {
+    text-decoration:underline;
+}
+nb {
+    font-weight:normal;
+}
+nb:hover {
+    text-decoration:italic;
+    cursor:normal;
+}
+::selection {
+    background:blue;
+}
+
+#topbar {
+    background:black;
+    color:white;
+    border:solid;
+    border-width:5px;
+    border-color:gray;
+    position:fixed;
+}
+#topbar #title {
+    color:lime;
+    font-family:courier;
+}
+  </style>
+	</HEAD>
+	<BODY>
+		
+		<h1>
+		    Watch
+		</h1>
+		<div id="watch">
+		    <iframe width="1000" height="600"></iframe>
+		</div>
+				<script>
+		    function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+const element = document.querySelector("iframe")
+element.src = "https://youtube.com/embed/"+ getParameterByName('v')
+		</script>
+	</BODY>
+</HTML>
